@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}image2{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        {% if var %}
+        <div class="col-md-12">
+            <img src="{% static 'django.png' %}" class="rounded mx-auto d-block" alt="djangopng">
+        </div>
+        {% else %}
+        <div class="col-md-12">
+            <img src="{% static 'django.png' %}" class="rounded mx-auto d-block" alt="djangopng">
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}image{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'django.png' %}" class="rounded mx-auto d-block" alt="djangopng">
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'django.png' %}" class="rounded mx-auto d-block" alt="djangopng">
+        </div>
+    </div>
+</div>
+{% endblock %}

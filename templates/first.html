@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% block title %}first{% endblock %}
+{% block content %}
+<h1>first page</h1>
+<h1>{{ var }}</h1>
+<h1>{{ greeting }}</h1>
+<ul>
+    {% for fruit in fruits %}
+    <li>{{ fruit }}</li>
+    {% endfor %}
+</ul>
+{% if ans %}
+<!-- return true -->
+<h1>{{ num1 }} is greater than {{ num2 }}</h1>
+{% else %}
+<!-- return false -->
+<h1>{{ num2 }} is greater than {{ num1 }}</h1>
+{% endif %}
+{% endblock %}
