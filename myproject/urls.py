@@ -21,7 +21,11 @@ import myapp
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('',include('myapp.urls')),
-    path('calapp',include('calapp.urls'))
+    path('calapp',include('calapp.urls')),
+    path('voteapp',include('voteapp.urls')),
+    path('todoapp',include('todoapp.urls')),
+    path('mongocon',include('mongocon.urls'))
+
 
 ]
 

@@ -1,0 +1,21 @@
+{% extends 'todoapp/index.html' %}
+{% block title %}all todos{% endblock %}
+{% block content %}
+{% for eachtodo in alltodos %}
+<div class="row container-fluid">
+    <div class="col-md-6" style="margin: auto;">
+        <div class="card container-fluid">
+            <div class="card-body">
+                <h5 class="card-title">{{eachtodo.title}}({{eachtodo.priority}})</h5>
+                <p class="card-text">{{eachtodo.description}}</p>
+                <p class="">{{eachtodo.created_at}}</p>
+                <a href="../delete/{{eachtodo.id}}" class="btn btn-primary">Delete</a>
+                <a href="../edit/{{eachtodo.id}}" class="btn btn-primary">Edit</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 6:00 -->
+{% endfor %}
+{% endblock %}

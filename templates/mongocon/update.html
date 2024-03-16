@@ -1,0 +1,14 @@
+{% extends 'mongocon/index.html' %}
+{% block content %}
+<h1>Hello, Django</h1>
+<p>update:{{filename}}</p>
+<form method="POST" action="{% url  'mongocon:update_submit_file' filename %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <div class="input-group mb-3">
+            <input type="file" name="content" class="form-control" id="inputGroupFile02" required>
+        </div>
+        <button type="submit">Update submit</button>
+    </div>
+</form>
+{% endblock %}

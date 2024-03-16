@@ -1,0 +1,11 @@
+{% extends 'mongocon/index.html' %}
+{% block title %}error{% endblock %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">File not found</h1>
+    <p class="lead">Empty database</p>
+    <hr class="my-4">
+    <p>filename doesnt match</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'mongocon:index' %}" role="button">Go for upload</a>
+</div>
+{% endblock %}
