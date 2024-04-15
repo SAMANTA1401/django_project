@@ -14,6 +14,7 @@ urlpatterns = [
     path('update_file/<str:name>',views.update_file, name='update_file'),
     path('update_submit_file/<str:name>',views.update_submit_file, name='update_submit_file'),
     path('delete_file/<str:name>',views.delete_file, name='delete_file'),
+    path('read_file', views.read_file, name='read_file'),
 
 
     

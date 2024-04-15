@@ -34,19 +34,27 @@
             <button class="btn btn-primary" type="submit"><input name="filename" value="{{ eachname.filename }}"
                     hidden>download</button>
         </div>
-    </form>
+     </form>
     <form method="POST" action="{% url 'mongocon:update_file' eachname.filename %} " enctype="multipart/form-data">
         {% csrf_token %}
         <div class="mb-3">
             <button class="btn btn-primary" type="submit">Update</button>
         </div>
-    </form>
+    </form> 
     <form method="POST" action="{% url 'mongocon:delete_file' eachname.filename %} " enctype="multipart/form-data">
         {% csrf_token %}
         <div class="mb-3">
             <button class="btn btn-primary" type="submit">delete</button>
         </div>
     </form>
+    <form method= "POST" action="{% url 'mongocon:read_file' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit"><input name="filename" value="{{ eachname.filename }}"
+                    hidden>read</button>
+        </div>
+    </form>
+    
 
     {% endfor %}
     {% endblock %}
